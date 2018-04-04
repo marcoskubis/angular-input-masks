@@ -29,13 +29,7 @@ module.exports = maskFactory({
 	format: function(cleanValue) {
 		var formattedValue;
 
-		if (cleanValue.indexOf('0800') === 0) {
-			formattedValue = phoneMask0800.simple.apply(cleanValue);
-		} else if (cleanValue.length < 11) {
-			formattedValue = phoneMask8D.areaCode.apply(cleanValue);
-		} else {
-			formattedValue = phoneMask9D.areaCode.apply(cleanValue);
-		}
+		formattedValue = phoneMask9D.areaCode.apply(cleanValue);
 
 		return formattedValue.trim().replace(/[^0-9]$/, '');
 	},
@@ -53,7 +47,7 @@ module.exports = maskFactory({
 			//11- 9D with AC and 0800
 			//12- 8D with AC plus CC
 			//13- 9D with AC plus CC
-			return valueLength >= 10 && valueLength <= 11;
+			return valueLength == 11;
 		}
 	}
 });
