@@ -1,12 +1,12 @@
 {
-  "name": "angular-input-masks",
-  "version": "4.0.0",
-  "description": "Personalized input masks for AngularJS",
+  "name": "ironware-angular-input-masks",
+  "version": "4.0.5",
+  "description": "Forked from http://github.com/assisrafael/angular-input-masks",
   "repository": {
     "type": "git",
-    "url": "https://github.com/assisrafael/angular-input-masks.git"
+    "url": "https://github.com/marcoskubis/angular-input-masks.git"
   },
-  "homepage": "http://github.com/assisrafael/angular-input-masks",
+  "homepage": "http://github.com/marcoskubis/angular-input-masks",
   "scripts": {
     "build": "gulp build",
     "ci": "npm run lint && npm run test",
